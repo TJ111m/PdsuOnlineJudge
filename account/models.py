@@ -26,6 +26,7 @@ class UserManager(models.Manager):
 class User(AbstractBaseUser):
     username = models.TextField(unique=True)
     email = models.TextField(null=True)
+    grade = models.TextField(null=true)
     create_time = models.DateTimeField(auto_now_add=True, null=True)
     # One of UserType
     admin_type = models.TextField(default=AdminType.REGULAR_USER)
