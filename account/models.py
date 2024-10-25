@@ -100,15 +100,13 @@ class UserProfile(models.Model):
     # like acm_problems_status, merely add "score" field
     oi_problems_status = JSONField(default=dict)
 
-    real_name = models.TextField(null=True)
     avatar = models.TextField(default=f"{settings.AVATAR_URI_PREFIX}/default.png")
     blog = models.URLField(null=True)
     mood = models.TextField(null=True)
     github = models.TextField(null=True)
-    school = models.TextField(null=True)
+    
     major = models.TextField(null=True)
     language = models.TextField(null=True)
-    grade = models.IntegerField(default=0)
     experience = models.IntegerField(default=0)
     # for ACM
     accepted_number = models.IntegerField(default=0)
